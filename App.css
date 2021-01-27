@@ -1,19 +1,22 @@
+.background {
+  background: url(treebackground.jpg)  ;
+}
 .heading {
   text-align: center;
-  height: 50vmin;
+  font-size: calc(30px + 2vmin);
   color: rgb(120,00,220);
   font: arial;
 }
 .image {
   align-self: center;
   background-color: black;
-}.pretty-text {
+}
+.pretty-text {
   text-align: center;
-  height: 25vmin;
+  font-size: calc(10px + 2vmin);
   color: rgb(20, 2, 34);
   font: arial;
 }
-
 
 
 /*these down here are just for reference*/
