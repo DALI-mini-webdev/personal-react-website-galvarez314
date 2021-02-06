@@ -2,7 +2,7 @@ import speedmovie from './speedmovie.jpg';
 import React from 'react';
 import treebackground from './treebackground.jpg';
 import './App.css';
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar.js";
 
 const App = () => {
   const coolplaceslist = ["Hawaii","Bates College", "The Beach", "The Mariana Trench"]
@@ -19,8 +19,7 @@ const App = () => {
     console.log (answer)
   }
   return (
-    <Navbar />
-    <div classname = "background"/*the goal of this is to have a tree image as the background*/> 
+    <div><Navbar />
       <p classname = "heading">
         Welcome to my website! :D
       </p>
@@ -36,3 +35,5 @@ const App = () => {
     </div>
   );
 }
+
+export default App;
