@@ -24,7 +24,7 @@ class Nameboard extends Component {
     }
 }
 
-constructor(props) {
+constructor(props); {
     super(props);
     this.state = {
       names: Map(),
@@ -53,6 +53,6 @@ constructor(props) {
       {allDogs}
       <p>Add a name!</p>
       </div>
- 
-    export default Name;
+  )
+export default Name;
 

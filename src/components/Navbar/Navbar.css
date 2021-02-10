@@ -114,7 +114,7 @@
     .nav-links-mobile:hover {
         background: #fff;
         color: #6568f4;
-        transition: 250ms;
+        transition: 300ms;
     }
 
     Button {
