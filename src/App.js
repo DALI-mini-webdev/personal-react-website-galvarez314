@@ -3,6 +3,7 @@ import React from 'react';
 import treebackground from './treebackground.jpg';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar.js";
+import axios from 'axios'
 
 const App = () => {
   const coolplaceslist = ["Hawaii","Bates College", "The Beach", "The Mariana Trench"]
@@ -18,6 +19,36 @@ const App = () => {
     )
     console.log (answer)
   }
+  fetchdata = () => {
+    axios.get(https://poetrydb.org/random)
+    then((response){
+      console.log(response);
+      this.setState({
+        data: response.data[0]
+      })
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
+  renderPoem = () => {
+    if (this.state.data) {
+      return(
+        <div>Title: {this.state.data.Title}
+        Author: {this.state.data.Author}</div>
+        { 
+         this.state.data.lines.map((line) => {
+            return(<div>{line}</div>)
+          })
+        }
+      else {
+      return (
+        <div>There is no poem :(</div>
+      
+      )
+    }
+    }
+  }
   return (
     <div><Navbar />
       <p classname = "heading">
@@ -31,6 +62,8 @@ const App = () => {
       <p>{answer}</p>
       <footer classname = "pretty-text">
       <button><p>This button doesn't work yet, it does nothing</p></button>
+      <button onClick = {this.fetchdata}> Poem button! </button>
+
       </footer>
     </div>
   );
