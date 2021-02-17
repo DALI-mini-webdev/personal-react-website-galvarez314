@@ -4,6 +4,8 @@ import treebackground from './treebackground.jpg';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar.js";
 import axios from 'axios'
+import Firebase from './firebase/index';
+import ToDoBoard from './components/ToDoBoard';
 
 const App = () => {
   const coolplaceslist = ["Hawaii","Bates College", "The Beach", "The Mariana Trench"]
@@ -21,7 +23,7 @@ const App = () => {
   }
   fetchdata = () => {
     axios.get(https://poetrydb.org/random)
-    then((response){
+    then((response) {
       console.log(response);
       this.setState({
         data: response.data[0]
@@ -51,6 +53,7 @@ const App = () => {
   }
   return (
     <div><Navbar />
+    <ToDoBoard />
       <p classname = "heading">
         Welcome to my website! :D
       </p>
